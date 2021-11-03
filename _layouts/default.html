@@ -16,7 +16,8 @@
   <body class="xs-p0">
     <div class="clearfix">
     <section class="col md-col-3">
-      <header class="xs-p3 fill-gray-lighter">
+      <header>
+          <div class="fixed-pos xs-p3 fill-gray-lighter">
         {% if site.logo %}
           <img src="{{site.logo | relative_url}}" alt="Logo" title="Perky"/>
         {% endif %}
@@ -43,15 +44,15 @@
             <p>This project is maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></p>
             {% endif %}
             <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
-        
-     
           </nav>
+        </div>
       </header>
     
         </section>
-
             <main class="col md-col-8">
-                {{ content }}
+                <div class="xs-p3">
+                    {{ content }}
+                </div>
             </main>
         </div>
 
