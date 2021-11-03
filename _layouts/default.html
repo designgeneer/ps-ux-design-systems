@@ -14,7 +14,8 @@
     {% include head-custom.html %}
   </head>
   <body>
-    <div class="wrapper">
+    <div class="clearfix">
+    <section class="col md-col-3">
       <header>
         {% if site.logo %}
           <img src="{{site.logo | relative_url}}" alt="Logo" title="Perky"/>
@@ -22,6 +23,8 @@
 
         <p>{{ site.description | default: site.github.project_tagline }}</p>
 
+      </header>
+      <nav>
         {% if site.github.is_project_page %}
         <p class="view"><a href="{{ site.github.repository_url }}">View the Project on GitHub <small>{{ site.github.repository_nwo }}</small></a></p>
         {% endif %}
@@ -37,19 +40,20 @@
           <li><a href="{{ site.github.repository_url }}">View On <strong>GitHub</strong></a></li>
         </ul>
         {% endif %}
-      </header>
-      <section>
+      </nav>
+        </section>
 
-      {{ content }}
-
-      </section>
+            <main class="col md-col-8">
+                {{ content }}
+            </main>
+        </div>
       <footer>
         {% if site.github.is_project_page %}
         <p>This project is maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></p>
         {% endif %}
         <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
       </footer>
-    </div>
+ 
     <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
   </body>
 </html>
