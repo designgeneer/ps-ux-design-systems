@@ -17,9 +17,9 @@
     <div class="clearfix">
     <section class="xs-col-12 sm-col-3 lg-col-2 sm-fixed xs-t0 sm-b0 xs-l0 xs-overflow-auto sm-py3 sm-pb6 xs-border-bottom-lighter sm-border-bottom-none sm-border-right-lighter fill-white solid-nav">
       <header>
-          <div class="fixed-pos xs-p3 fill-gray-lighter">
+          <div class="fill-gray-lighter">
         {% if site.logo %}
-          <img src="{{site.logo | relative_url}}" alt="Logo" title="Perky"/>
+          <img src="{{site.logo | relative_url}}" alt="Logo" title="Perky" class="logo-img"/>
         {% endif %}
 
         <p>{{ site.description | default: site.github.project_tagline }}</p>
